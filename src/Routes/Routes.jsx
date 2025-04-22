@@ -10,6 +10,7 @@ import Error from "../Shared/Error";
 import Beginners from "../HotDealsPages/Beginners";
 import FloweringPlants from "../HotDealsPages/Flowering Plants";
 import Wishlist from "../Wishlist";
+import HotDeals from "../Pages/HotDeals";
 
 const router = createBrowserRouter([
   {
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
       {
         path: "/wishlist",
         element: <Wishlist />,
+      },
+      {
+        path: "/hot-deals",
+        element: <HotDeals />,
       },
     ],
   },

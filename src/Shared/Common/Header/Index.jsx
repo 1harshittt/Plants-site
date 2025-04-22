@@ -163,91 +163,52 @@ const Header = () => {
                       </ul>
                     </div>
                     <div className="sub-div">
-                      <a href="/">
-                        <img src={dropimg1} alt="dropimg" />
+                      <a href="/products">
+                        <img src={dropimg1} alt="Indoor Plants" />
+                        <div className="banner-button">
+                          <span>Indoor Plants</span>
+                        </div>
                       </a>
-                      <div className="banner-button">
-                        <a href="/">
-                          <span>Indoor plants</span>
-                        </a>
-                      </div>
                     </div>
                     <div className="sub-div">
-                      <a href="/">
-                        <img src={dropimg2} alt="dropimg" />
+                      <a href="/products">
+                        <img src={dropimg2} alt="Outdoor Plants" />
+                        <div className="banner-button">
+                          <span>Outdoor Plants</span>
+                        </div>
                       </a>
-                      <div className="banner-button">
-                        <a href="/">
-                          <span>Outdoor plants</span>
-                        </a>
-                      </div>
                     </div>
                   </div>
                 </div>
               </li>
               <li className="hot-deals-dropdown">
-                <Link>Hot Deals</Link>
+                <Link to="/products">Hot Deals</Link>
                 <div className="dropdown-of-hot-deals">
                   <div className="dropdown-content-hot-deals">
-                    <Link to={"/beginners"}>
-                      <div className="sub-div-hot-deals">
-                        <a href="/">
-                          <img src={dropimg3} alt="dropimg3" />
-                        </a>
-                        <a href="/">
-                          <span>10% 0ff</span>
-                        </a>
-                      </div>
+                    <Link to="/products" className="sub-div-hot-deals">
+                      <img src={dropimg3} alt="Beginners Plants" />
+                      <p>Monstera</p>
+                      <span>-20%</span>
                     </Link>
-                    <Link to={"/floweringplants"}>
-                      <div className="sub-div-hot-deals">
-                        <a href="/">
-                          <img src={dropimg4} alt="dropimg4" />
-                        </a>
-                        <a href="/">
-                          <span>15% off</span>
-                        </a>
-                      </div>
+                    <Link to="/products" className="sub-div-hot-deals">
+                      <img src={dropimg4} alt="Flowering Plants" />
+                      <p>Snake Plant</p>
+                      <span>-15%</span>
                     </Link>
-                    <Link to={"/beginners"}>
-                      <div className="sub-div-hot-deals">
-                        <a href="/">
-                          <img src={dropimg5} alt="dropimg5" />
-                        </a>
-                        <a href="/">
-                          <span>20% 0ff</span>
-                        </a>
-                      </div>
+                    <Link to="/products" className="sub-div-hot-deals">
+                      <img src={dropimg5} alt="Decor Plants" />
+                      <p>Peace Lily</p>
+                      <span>-25%</span>
                     </Link>
-                    <Link to={"/floweringplants"}>
-                      <div className="sub-div-hot-deals">
-                        <a href="/">
-                          <img src={dropimg6} alt="dropimg6" />
-                        </a>
-                        <a href="/">
-                          <span>25% 0ff</span>
-                        </a>
-                      </div>
+                    <Link to="/products" className="sub-div-hot-deals">
+                      <img src={dropimg6} alt="Pet Friendly Plants" />
+                      <p>Spider Plant</p>
+                      <span>-30%</span>
                     </Link>
-                    <Link to={"/forbeginners"}>
-                      <div className="sub-div-hot-deals">
-                        <a href="/">
-                          <img src={dropimg7} alt="dropimg7" />
-                        </a>
-                        <a href="/">
-                          <span>30% 0ff</span>
-                        </a>
-                      </div>
-                    </Link>
-                    <Link to={"/floweringplants"}>
-                      <div className="sub-div-hot-deals">
-                        <a href="/">
-                          <img src={dropimg8} alt="dropimg8" />
-                        </a>
-                        <a href="/">
-                          <span>35% 0ff</span>
-                        </a>
-                      </div>
+                    <Link to="/products" className="sub-div-hot-deals">
+                      <img src={dropimg7} alt="Air Purifying Plants" />
+                      <p>ZZ Plant</p>
+                      <span>-10%</span>
                     </Link>
                   </div>
                 </div>
@@ -262,7 +223,7 @@ const Header = () => {
             <input type="text" placeholder="Search..." />
           </div>
           <div className="user-actions">
-            <RiAccountCircleLine className="account-icon" />
+           <Link to="/account"><RiAccountCircleLine className="account-icon" /></Link>
             <Link to="/account" className="user-action">
               Account
             </Link>

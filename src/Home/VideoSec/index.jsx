@@ -8,6 +8,7 @@ export default function VideoSec() {
         <div className="video-container">
           <div className="content-wrapper">
             <a
+              target="_blank"
               href="https://www.youtube.com/watch?v=UZ_JZaNQrAw&list=RDMM-2RAq5o5pwc&index=2"
               className="popup-video"
             >
