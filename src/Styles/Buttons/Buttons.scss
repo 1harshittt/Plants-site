@@ -1,0 +1,42 @@
+@mixin button {
+  margin-top: 5px;
+  padding: 8px 16px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  border: 2px solid transparent;
+  transition: 0.5s ease-in-out;
+  a {
+    span {
+      font-size: 12px;
+      color: #262626;
+      font-weight: 700;
+    }
+  }
+  &:hover {
+    background-color: transparent;
+    border-radius: 30px;
+    border: 2px solid #ffffff;
+    transition: 0.5s ease-in-out;
+
+    a {
+      span {
+        font-size: 12px;
+        color: #ffffff;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+@mixin cartButton {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  background: #ffffff;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+}

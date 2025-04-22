@@ -1,0 +1,271 @@
+@import "../../Styles/index.scss";
+
+.flowering-plants {
+  margin: 0 auto;
+  width: 100%;
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  overflow-x: hidden;
+
+  .container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @media (max-width: 576px) {
+      padding: 0 16px;
+    }
+  }
+
+  .breadcrumb {
+    padding: 15px 0;
+    background-color: white;
+    border-bottom: 1px solid #e9ecef;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 3;
+
+    .container {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+
+      a {
+        color: #6c757d;
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #145333;
+        }
+      }
+
+      svg {
+        color: #6c757d;
+        font-size: 12px;
+      }
+
+      span {
+        color: #145333;
+      }
+    }
+  }
+
+  .bg-cover {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+
+    .bg-img {
+      background-image: linear-gradient(rgba(20, 83, 51, 0.7), rgba(20, 83, 51, 0.7)), url(../../Assets/Images/floweringplantsbgimg.webp);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      padding: 60px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+
+      @media (max-width: 768px) {
+        padding: 40px 0;
+      }
+
+      .container {
+        h1 {
+          font-size: 48px;
+          font-weight: 700;
+          margin-bottom: 16px;
+          line-height: 1.2;
+
+          @media (max-width: 768px) {
+            font-size: 36px;
+          }
+
+          @media (max-width: 576px) {
+            font-size: 32px;
+          }
+        }
+
+        p {
+          font-size: 18px;
+          opacity: 0.9;
+          margin: 0;
+
+          @media (max-width: 768px) {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .products-section {
+      flex: 1;
+      padding: 40px 0;
+      position: relative;
+      z-index: 1;
+
+      .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 24px;
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 20px;
+        box-sizing: border-box;
+
+        @media (max-width: 1200px) {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 20px;
+        }
+
+        @media (max-width: 992px) {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 20px;
+          padding: 0 16px;
+        }
+
+        @media (max-width: 576px) {
+          grid-template-columns: minmax(0, 1fr);
+          gap: 16px;
+          padding: 0 16px;
+        }
+
+        .card {
+          width: 100%;
+          height: 100%;
+          background-color: white;
+          border-radius: 8px;
+          overflow: hidden;
+          transition: all 0.3s ease;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+          display: flex;
+          flex-direction: column;
+
+          &:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+          }
+
+          .image-content {
+            position: relative;
+            width: 100%;
+            padding-top: 100%;
+            overflow: hidden;
+            background-color: #f8f9fa;
+
+            img {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              transition: transform 0.5s ease, filter 0.3s ease;
+            }
+
+            .heart {
+              position: absolute;
+              top: 16px;
+              right: 16px;
+              z-index: 2;
+              opacity: 0;
+              transform: translateY(-10px);
+              transition: all 0.3s ease;
+            }
+
+            .addToCart {
+              position: absolute;
+              left: 50%;
+              bottom: -50px;
+              transform: translateX(-50%);
+              z-index: 2;
+              transition: all 0.3s ease;
+              width: 80%;
+
+              button {
+                width: 100%;
+                padding: 12px 24px;
+                background-color: white;
+                border: none;
+                border-radius: 4px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                font-weight: 500;
+                color: #145333;
+                transition: all 0.3s ease;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+                &:hover {
+                  background-color: #145333;
+                  color: white;
+                }
+
+                .bag-icon-cart {
+                  font-size: 18px;
+                }
+              }
+            }
+
+            &:hover {
+              img {
+                transform: scale(1.1);
+                filter: blur(2px) brightness(0.95);
+              }
+
+              .heart {
+                opacity: 1;
+                transform: translateY(0);
+              }
+
+              .addToCart {
+                bottom: 16px;
+              }
+            }
+          }
+
+          .bottom-content {
+            padding: 20px;
+            text-align: center;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: white;
+
+            h3 {
+              font-size: 16px;
+              font-weight: 500;
+              color: #212529;
+              margin: 0 0 8px;
+              transition: color 0.3s ease;
+              line-height: 1.4;
+
+              &:hover {
+                color: #145333;
+              }
+            }
+
+            .price {
+              font-size: 18px;
+              font-weight: 600;
+              color: #145333;
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

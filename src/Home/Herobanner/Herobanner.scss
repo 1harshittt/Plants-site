@@ -1,0 +1,262 @@
+@import "../../Styles/index.scss";
+
+.herobanner {
+  padding: 0 15px;
+  padding-bottom: 50px;
+  margin: 0 50px; // 50px margin from both sides
+  @media (max-width: 800px) {
+    margin: 0;
+  }
+
+  .flex-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+    @media (max-width: 1000px) {
+      flex-direction: column;
+    }
+
+    .hero1 {
+      .image-1 {
+        img {
+          max-width: 1173px;
+          height: 840px;
+          border-radius: 10px 0 0 10px;
+          animation: 1.5s cubic-bezier(0.26, 0.54, 0.32, 1) forwards fadein;
+          @media (max-width: 1000px) {
+            border-radius: 5px;
+          }
+          @media (max-width: 800px) {
+            max-width: 835px;
+            height: 565px;
+            border-radius: 5px;
+          }
+          @media (max-width: 600px) {
+            height: 400px;
+            width: 100%;
+          }
+          @media (max-width: 500px) {
+            height: 350px;
+            width: 100%;
+          }
+        }
+      }
+    }
+    .hero2 {
+      flex: 1 1 50%; /* Adjust width for larger screens */
+      @media (max-width: 1000px) {
+        width: 100%;
+        margin-top: -10px;
+      }
+
+      .cover-bg {
+        background-image: url(../../Assets/Images/heroimg-2bg.webp);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 840px;
+        color: #145333;
+        @media (max-width: 450px) {
+          height: 600px;
+        }
+        @media (max-width: 800px) {
+          height: 750px;
+        }
+      }
+
+      .hero-2content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .head-content {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          line-height: 15px;
+          justify-content: center;
+
+          h3 {
+            font-size: 45px; /* Adjust font size for larger screens */
+            font-weight: 700;
+
+            @media (max-width: 1200px) {
+              font-size: 30px;
+            }
+            @media (max-width: 1000px) {
+              font-size: 32px;
+            }
+            @media (max-width: 700px) {
+              font-size: 24px;
+            }
+          }
+
+          .section-sub-heading {
+            padding-bottom: 5px;
+            font-size: 18px; /* Adjust font size for larger screens */
+            border-bottom: 2px solid #c9cec7;
+            font-weight: 600;
+
+            @media (max-width: 1200px) {
+              font-size: 14px;
+            }
+            @media (max-width: 1000px) {
+              font-size: 18px;
+            }
+            @media (max-width: 800px) {
+              font-size: 16px;
+            }
+          }
+        }
+
+        .image-content {
+          position: relative;
+          overflow: hidden;
+          img {
+            height: 293px;
+            width: 100%; /* Adjust width for larger screens */
+            max-width: 310px;
+            border-radius: 5px;
+            transition: transform 0.6s ease;
+            animation: 1.5s cubic-bezier(0.26, 0.54, 0.32, 1) forwards fadein;
+            @media (max-width: 1000px) {
+              width: 404px;
+              height: 525px;
+            }
+            @media (max-width: 800px) {
+              max-width: 380px;
+              height: 500px;
+            }
+            @media (max-width: 570px) {
+              max-width: 465px;
+              height: 530px;
+            }
+            @media (max-width: 450px) {
+              max-width: 250px;
+              height: 300px;
+            }
+          }
+          &:hover img {
+            transform: scale(1.1);
+            filter: blur(2px);
+            transition: 0.4s ease-in-out;
+          }
+
+          .heart {
+            display: none;
+            position: absolute;
+            top: 5%;
+            right: 3%;
+          }
+          &:hover {
+            .heart {
+              display: block;
+              transition: 0.8s ease-in-out;
+            }
+          }
+          .addToCart {
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            opacity: 0;
+            transition: 0.5s ease-in-out;
+            border-radius: 25px;
+            @media (max-width: 1000px) {
+              opacity: 1;
+              left: 35%;
+              top: 90%;
+            }
+
+            button {
+              position: relative;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-radius: 25px;
+              background: #ffffff;
+              box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+              overflow: hidden;
+              cursor: pointer;
+              border: none;
+            }
+
+            button:after {
+              content: " ";
+              width: 0%;
+              height: 100%;
+              background: #262626;
+              position: absolute;
+              transition: all 0.4s ease-in-out;
+              right: 0;
+            }
+
+            button:hover::after {
+              right: auto;
+              left: 0;
+              width: 100%;
+            }
+
+            button span {
+              text-align: center;
+              text-decoration: none;
+              width: 100%;
+              padding: 10px 20px;
+              color: #262626;
+              font-size: 13px;
+              font-weight: 700;
+              word-spacing: 1px;
+              z-index: 20;
+              transition: all 0.3s ease-in-out;
+            }
+
+            button:hover span {
+              color: #ffffff;
+              animation: scaleUp 0.3s ease-in-out;
+            }
+            .bag-icon-cart {
+              position: absolute;
+              left: 4%;
+              top: 28%;
+              height: 15px;
+              width: 15px;
+            }
+          }
+
+          &:hover {
+            .addToCart {
+              opacity: 1;
+              transition: 0.5s ease-in-out;
+            }
+          }
+        }
+        .bottom-content {
+          padding: 25px 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          line-height: 24px; /* Adjust line-height for larger screens */
+          color: #828282;
+
+          a {
+            color: #262626;
+            font-size: 16px; /* Adjust font size for larger screens */
+            font-weight: 700;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  @keyframes fadein {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}

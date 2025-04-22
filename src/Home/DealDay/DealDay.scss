@@ -1,0 +1,106 @@
+@import "../../Styles/index.scss";
+
+.deal-day-wrapper {
+  margin: 50px auto;
+  padding: 0 15px;
+  @media (max-width: 1300px) {
+    margin: 50px 0;
+  }
+
+  .deal-day {
+    background-image: url(../../Assets/Images/background-color-image.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    @media (max-width: 800px) {
+      flex-direction: column;
+    }
+    .deal-img {
+      padding: 0 15px;
+      img {
+        width: 417px;
+        height: 640px;
+        @media (max-width: 1800px) {
+          width: 350px;
+          height: 600px;
+        }
+        @media (max-width: 1300px) {
+          width: 306px;
+        }
+        @media (max-width: 1000px) {
+          width: 250px;
+        }
+        @media (max-width: 800px) {
+          display: none;
+        }
+      }
+    }
+    .slider-part-wrapper {
+      padding: 0px 80px;
+      @media (max-width: 1800px) {
+        padding: 0 50px;
+      }
+      @media (max-width: 1650px) {
+        padding: 0 20px;
+      }
+      @media (max-width: 1300px) {
+        padding: 0 50px;
+      }
+      @media (max-width: 1000px) {
+        padding: 0 10px;
+      }
+      .slider-part {
+        display: flex;
+        flex-direction: column;
+        color: #145333;
+        .slider-head {
+          display: flex;
+          align-items: center !important;
+          @media (max-width: 800px) {
+            flex-direction: column;
+            justify-content: center;
+            h2 {
+              padding: 0;
+              margin: 0;
+            }
+          }
+
+          h2 {
+            font-weight: 700;
+            font-size: 45px;
+            margin-bottom: 0;
+            padding-right: 30px;
+            margin-right: auto;
+          }
+          @media (max-width: 1650px) {
+            h2 {
+              font-size: 40px;
+            }
+            span {
+              display: none;
+            }
+          }
+          @media (max-width: 1300px) {
+            h2 {
+              font-size: 35px;
+            }
+          }
+          @media (max-width: 800px) {
+            h2 {
+              font-size: 35px;
+              margin: 0 auto;
+            }
+            span {
+              display: block;
+              margin-right: 10px;
+            }
+          }
+        }
+        .slider {
+          max-width: 1280px;
+        }
+      }
+    }
+  }
+}

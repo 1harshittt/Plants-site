@@ -1,0 +1,33 @@
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 2px 2px 2px;
+  background-color: #ffffff;
+  border-color: #ffe2e2;
+  border-style: solid;
+  border-radius: 35px;
+  word-spacing: -2px;
+}
+
+.filled,
+.empty {
+  fill: rgb(255, 110, 110);
+  transition: opacity 100ms ease-in-out;
+  height: 23px;
+  width: 23px;
+}
+
+.filled {
+  position: absolute;
+  opacity: 0;
+}
+
+button:hover .empty {
+  opacity: 0;
+}
+
+button:hover .filled {
+  opacity: 1;
+  animation: beatingHeart 1.2s infinite;
+}
