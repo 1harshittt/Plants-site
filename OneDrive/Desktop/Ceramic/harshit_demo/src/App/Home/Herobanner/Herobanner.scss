@@ -1,0 +1,152 @@
+@import '../../../Styles/index.scss';
+
+.Herobanner{
+    background-color: var(--theme-home-bg-color);
+    height: auto;
+
+    .flex-side{
+       @include flex-row;
+        justify-content: space-evenly;
+        padding: 0 40px;
+        padding-top: 20px;
+
+        @media(max-width:1080px){
+         flex-direction: column;
+         justify-content: center;
+         padding: 30px 0 0 ;
+        }
+        .hero-texts{
+            display: flex;
+            flex-direction: column;
+            gap: 25px 0;
+            padding: 50px 120px 100px 0;
+             color: #ffffff;          
+             h6{
+                letter-spacing: 1.5px;
+               @include font16;
+                font-weight: 500;
+             }
+             h1{
+                font-family: playfair-display;
+                @include font70;
+                max-width: 605px;
+                font-weight: 500;
+                line-height: 1.1em;
+
+             }
+             h2{
+                font-family: playfair-display;
+               @include font24;
+                font-weight: 500;
+             }
+             .button-shop-now{
+                @include button;
+                margin-top: 30px;
+             }
+             @media(max-width:1080px){
+               padding: 20px;
+                text-align: center;
+                align-items: center;
+               h6{
+                 @include font18;
+               }
+               h1{
+                  @include font68;
+                 
+               }
+               h2{
+                  @include font20;
+               }
+               .button-shop-now{
+                  margin-top: 10px;
+               }
+             }
+             @media(max-width:700px){
+               padding: 0;
+               h6{
+                  @include font16;
+                }
+                h1{
+                   @include font48;
+                  
+                }
+                h2{
+                   @include font18;
+                }
+                .button-shop-now{
+                  @include button768;
+                  margin-bottom: 10px;
+                }
+             }
+             @media(max-width:570px){
+               padding: 0;
+               h6{
+                  @include font14;
+                }
+                h1{
+                   @include font42;
+                  
+                }
+                h2{
+                   @include font18;
+                }
+             }
+        }
+
+        .hero-img{
+            position: relative;
+            .hero-img-1{
+              
+            img{
+                height: 680px;
+                width: 445px;
+               margin: 0 0 20px 100px;
+            }
+            }
+            .hero-img-2{
+                position: absolute;
+                top: 25%;
+                left: -10%;
+               img{
+                 max-width: 320px;
+                 width: 315px;
+                 height: 401px;
+               }
+            }
+            @media(max-width:1080px){
+               .hero-img-1{
+                  img{
+                     max-width: 100%;
+                      width: 700px;
+                      height: 800px;
+                      margin: 0;
+                      @media(max-width:600px){
+                        width: 400px;
+                        height: 500px;
+                      }  
+                         
+                  }
+               }
+               .hero-img-2{
+                  top: 25%;
+                  left: 25%;
+               img{
+                  @media(max-width:768px){
+                     width:auto;
+                     height: 350px;
+                  }
+                  @media(max-width:576px){
+                     width:200px;
+                     height: 250px;
+                  }
+                  @media(max-width:500px){
+                     width: 180px;
+                     height: 200px;        
+                  }  
+               }
+                
+               }
+            }
+        }
+    }
+}

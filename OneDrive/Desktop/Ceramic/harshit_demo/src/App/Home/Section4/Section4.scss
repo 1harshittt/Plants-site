@@ -1,0 +1,211 @@
+@import '../../../Styles/index.scss';
+
+.Section4{
+    .sec4-bg{
+        background-image: url(../../../Assets/Images/sec4-bg-img.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background: 0.3s;
+        height: auto;
+        @media(max-width:576px){
+            background-position: none;
+        }
+        .Container{
+             .sec4-content{
+                padding: 100px 0;
+                max-width: 100%;
+                width: 900px;
+                margin: 0 auto;
+                .sec4-texts{
+                    padding: 48px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                background-color: var(--theme-white-background);
+                gap: 20px 0;
+                h2{
+                    font-family: playfair-display;
+                    @include font48;
+                    font-weight: 500;
+                }
+                h4{
+                    font-family: playfair-display;
+                   @include  font24;
+                   font-weight: 500;
+                }
+                .button-shop-now{
+                    padding-top: 10px;
+                     button{
+                        @include button;
+                        border: 1px solid var(--theme-home-bg-color);
+                        color: var(--theme-home-bg-color);
+                        font-weight: 500;
+                        padding: 14px 28px;
+                        @include font14;
+                        letter-spacing: 1.5px;
+                        &:hover {
+                            color: var(--theme-white-background);
+                            background-color: var(--theme-home-bg-color);
+                         
+                        }
+                     }
+                }
+             }
+             @media(max-width:1080px){
+                padding: 80px 0;
+                .sec4-texts{
+                    gap: 10px;
+                    h2{
+                       @include font38;
+                    }
+                    h4{
+                       @include font20;
+                    }
+                }
+             }
+             @media(max-width:768px){
+                padding: 60px 0;
+                .sec4-texts{
+                    padding: 30px 22px;
+                    gap: 10px;
+                    h2{
+                        @include font35;
+                    }
+                    h4{
+                       @include font16;
+                    }
+                }
+             }
+           
+           
+            }
+          
+        }
+        
+    }
+    .section4-flex{
+        max-width: 1200px;
+        @include flex-col;
+        align-items: flex-start;
+        background: transition 0.3s;
+        gap: 20px 0;
+        padding-top: 100px;
+        padding-bottom: 40px;
+        margin: 0 auto;
+        color: #025048;
+        @media(max-width:768px){
+           padding-top: 50px;
+        }
+        .sec4-texts{
+            max-width: 100%;
+            h6{
+                @include font14;
+                letter-spacing: 1.5px;
+                font-weight: 500;
+                margin-bottom: 20px
+            }
+            h2{
+                @include font48;
+                font-family: playfair-display;
+                font-weight: 600;
+                line-height: 1.2em;
+            }
+            @media(max-width:768px){
+                h2{
+                @include font38;
+                    
+                }
+             }
+            @media(max-width:576px){
+                h2{
+                @include font25;
+                padding-top: 10px
+                    
+                }
+             }
+        }
+    .card-grid{
+        @include grid-cards;
+        padding: 30px 0 0;
+       width: 100%;
+       margin: 0 auto;
+       @media(max-width:576px){
+        padding: 20px 0 0;
+       }
+           .sec4card{
+            margin-bottom: 40px;
+            padding-bottom: 10px;
+             .card-img{
+               position: relative;
+                 padding-bottom: 10px;
+                 img{
+                   width: 100%;
+                   display: block;
+                 }
+                 .shopbutton{
+                    opacity: 0;
+                    position: absolute;
+                    bottom: -3%;
+                    left: 35%;
+                    transition: 0.2s ease-in-out;
+                   button{
+                    @include cartbutton;
+                   }
+                   @media(max-width:1080px){
+                    opacity: 1;
+                    left: 30%;
+                 }
+                 @media(max-width:576px){
+                    opacity: 1;
+                    left: 50%;
+                 }
+                 }
+                 &:hover{
+                    .shopbutton{
+                        opacity: 1;
+                        transition: 0.5s ease-in-out;
+                    }
+                 }
+               
+               
+             }
+             
+             .card-content{
+                margin: 10px 0;
+                p{
+                    margin-bottom: 10px;
+                    @include font12;
+                }
+                h2{
+                     padding-bottom: 10px;
+                     @include font22;
+                     font-family: playfair-display;
+                }
+                .price{
+                  
+                   del,span{
+                    @include font18;
+                    font-weight: 600;
+                   
+                }
+             }
+             @media(max-width:576px){
+                   p{
+                    @include font10;
+                   }
+                   h2{
+                    @include font18;
+                   }
+                   .price{
+                    del,span{
+                        @include font14;
+                    }
+                   }
+            }
+        }
+        }
+    }
+}
+}

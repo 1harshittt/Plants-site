@@ -1,0 +1,103 @@
+@import '../../../Styles/index.scss';
+
+.Footer{
+    background-color: var(--theme-sec2-bg-color);
+    .Container{
+         .footer-content{
+            display: flex;
+             justify-content: space-between;
+             align-items: flex-start;
+             margin: 0 auto;
+             max-width: 1200px;
+             padding: 60px 40px 20px;
+             .logo {
+                display: flex;
+                align-self: flex-start;
+             min-height: 60px;
+                a {
+                  color: var(--theme-home-bg-color);
+                  @include font24;
+                  font-family: playfair-display;
+                  padding: 0 20px;
+                }
+              }
+            .nav{
+               ul{
+                display: flex;
+                list-style: none;
+                gap: 30px;
+                li{
+                    a{
+                        color: var(--theme-home-bg-color);
+                    }
+                }
+              
+               }
+            }
+            .social-media{
+                display: flex;
+                gap: 20px;
+                color: var(--theme-home-bg-color);
+                cursor: pointer;
+            }
+
+            @media(max-width: 768px){
+                align-items: center;
+                padding: 50px 32px 20px;
+                .logo {
+                    margin: 0;
+                        a {
+                          @include font22;
+                        }
+                      }
+                    .nav{
+                       ul{
+                        flex-direction: column;
+                        gap: 20px;
+                       }
+                    }
+            }
+            @media(max-width: 576px){
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 40px 24px 20px;
+                .logo {
+                        a {
+                          @include font20;
+                          font-family: playfair-display;
+                          padding: 0 20px;
+                        }
+                      }
+                    .nav{
+                        padding-bottom: 20px;
+                       ul{
+                        flex-direction: column;
+                        gap: 5px;
+                        @include font14;
+                       }
+                       
+                    }
+                   
+            }
+         }
+         .footer-bottom{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 50px;
+            align-items: flex-start;
+            min-height: 30px;
+            border-top: 1px solid #0250486d;
+            padding: 30px 40px;
+            color: var(--theme-home-bg-color);
+            .rights{
+                text-align: right;
+            }
+            @media(max-width: 576px){
+                grid-template-columns: repeat(1,1fr);
+               place-items: center;
+               gap: 30px;
+            }
+         }
+    }
+}

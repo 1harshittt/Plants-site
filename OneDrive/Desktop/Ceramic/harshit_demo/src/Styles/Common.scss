@@ -1,0 +1,41 @@
+body{
+    font-family: work-sans;
+    margin: 0;
+    padding: 0;
+}
+.Container {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: work-sans;
+    src: url(../Assets/Font/WorkSans-VariableFont_wght.ttf);
+
+}
+@font-face{
+    
+    font-family: playfair-display;
+    src: url(../Assets/Font/static/PlayfairDisplay-Regular.ttf);
+}
+* {
+box-sizing: border-box;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+   margin: 0;
+  }
+  ul {
+   margin: 0;
+   padding: 0;
+  }
+  a {
+   text-decoration: none;
+  }

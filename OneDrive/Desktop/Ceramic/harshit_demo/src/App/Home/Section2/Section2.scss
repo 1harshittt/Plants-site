@@ -1,0 +1,165 @@
+@import '../../../Styles/index.scss';
+
+.Section2{
+    color: #424b4a;
+    .sec2-bg-color{
+        background-color: var(--theme-sec2-bg-color);
+        width: 100%;
+        height: auto;
+        .Container{
+            .sec2-main-flex{
+                max-width: 1200px;
+              display: flex;
+              align-items:stretch;
+                gap: 80px;
+                padding: 100px 0px; 
+                margin: 0 auto;
+                @media(max-width:1024px){
+                    gap: 40px;
+                    align-items: flex-start;
+                }
+                @media(max-width:768px){
+                    flex-direction: column;
+                    gap: 10px;
+                    padding: 64px 0;
+                }
+                .sec2-left{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    .sec2-texts{
+                        @include flex-col;
+                        align-items: start;
+                        gap: 20px;
+                        h6{
+                            @include font14;
+                            letter-spacing: 1.5px;
+                            font-weight: 500;
+                            color: #025048;
+                        }
+                        h2{
+                            font-family: playfair-display;
+                            @include font48;
+                            font-weight: 500;
+                          
+                            
+                        }
+                        p{
+                            @include font16;
+                            line-height: 24px;
+                        }
+                    }
+                    .sec2-card{
+                        background-image: url(../../../Assets/Images/sec2-img1.jpg);
+                        background-size: cover;
+                        background-position: center;
+                       width: 100%;
+                        @include flex-col;
+                        justify-content: flex-end;
+                        margin-top: 20px;
+                        padding: 460px 25px 25px 25px;
+                        .sec2-card-texts{
+                            background-color: var(--theme-white-background);
+                            width: 100%;
+                            padding: 20px;
+                            h4{
+                                margin-bottom: 10px;
+                                @include font24;
+                                font-family: playfair-display;
+                                font-weight: 600;
+                            }
+                        }
+                        @media(max-width: 1024px){
+                            padding: 300px 20px 20px;
+                            .sec2-card-texts{
+                                padding: 10px;
+                                h4{
+                                    @include font20;      
+                                }
+                                p{
+                                    @include font14;
+                                }
+                            }
+                        }
+                        @media(max-width: 576px){
+                            padding: 200px 20px 20px;
+                            .sec2-card-texts{
+                                padding: 10px;
+                                h4{
+                                    @include font18;      
+                                }
+                                p{
+                                    @include font12;
+                                }
+                            }
+                        }
+                    }
+                }
+                .sec2-right{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    gap: 40px;
+                    margin: -180px 0;
+                    @media(max-width:768px){
+                        margin: 0;
+                        gap: 0;
+                        
+                    }
+                    .sec2-card-2{
+                        background-image: url(../../../Assets/Images/sec2-img2.jpg);
+                        background-size: cover;
+                        background-position: center;
+                        width: 100%;
+                        @include flex-col;
+                        justify-content: flex-end;
+                        margin-top: 20px;
+                        padding: 470px 25px 25px 25px;
+                        .sec2-card-texts{
+                            background-color: var(--theme-white-background);
+                            width: 100%;
+                            width: 100%;
+                            padding: 20px;
+                            h4{
+                                margin-bottom: 10px;
+                                @include font24;
+                                font-family: playfair-display;
+                                font-weight: 600;
+                            }
+                        }
+                        @media(max-width: 1024px){
+                            padding: 300px 20px 20px;
+                            .sec2-card-texts{
+                                padding: 10px;
+                                h4{
+                                    @include font20;      
+                                }
+                                p{
+                                    @include font14;
+                                }
+                            }
+                        }
+                        @media(max-width: 576px){
+                            padding: 200px 20px 20px;
+                            .sec2-card-texts{
+                                padding: 10px;
+                                h4{
+                                    @include font18;      
+                                }
+                                p{
+                                    @include font12;
+                                }
+                            }
+                        }
+                    }
+                    .card3{
+                        background-image: url(../../../Assets/Images/sec2-img3.jpg);
+                    }
+             
+                }
+            }
+        }
+    }
+}
